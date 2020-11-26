@@ -1,0 +1,66 @@
+.container-slider-card {
+  margin-top: 7em;
+  position: relative;
+
+  .card-slider {
+    display: flex;
+    align-items: center;
+
+    .btn-prev {
+      position: absolute;
+      left: -200px;
+      visibility: hidden;
+      z-index: 2;
+      cursor: pointer;
+      transition: 0.3s all ease;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .btn-next {
+      position: absolute;
+      right: -200px;
+      visibility: hidden;
+      z-index: 2;
+      cursor: pointer;
+      transition: 0.3s all ease;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .btn-next {
+        right: -50px;
+        visibility: visible;
+      }
+
+      .btn-prev {
+        left: -50px;
+        visibility: visible;
+      }
+    }
+
+    .card-wrapper {
+      display: flex;
+      white-space: nowrap;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      filter: drop-shadow(0px 18px 30px rgba(0, 0, 0, 0.08));
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+      }
+    }
+  }
+}

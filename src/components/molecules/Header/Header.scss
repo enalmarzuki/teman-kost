@@ -1,0 +1,87 @@
+.header {
+  .header-container {
+    .my-brand {
+      text-decoration: none;
+      font-size: 28px;
+    }
+
+    .hamburger-toggle {
+      background-image: url(../../../assests/img/icon/hamburger.png);
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      @media screen and (min-width: 769px) {
+        display: none;
+      }
+
+      &.x {
+        background-image: url(../../../assests/img/icon/hamburger-x.png);
+
+        @media screen and (min-width: 769px) {
+          display: none;
+        }
+      }
+    }
+
+    .collapse.navbar-collapse {
+      display: block;
+      &.slide {
+        display: block !important;
+
+        @media screen and (max-width: 768px) {
+          display: block !important;
+        }
+      }
+
+      .navbar-nav {
+        .nav-link {
+          text-align: center;
+          color: white;
+          margin-right: 1em;
+
+          &.active {
+            font-weight: bold;
+          }
+
+          @media screen and (max-width: 768px) {
+            margin-right: 0;
+          }
+        }
+
+        .btn-login {
+          color: white;
+          border-color: white;
+
+          &:hover {
+            background-color: white;
+            color: #01abab;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          position: absolute;
+          // position: fixed;
+          top: -220px;
+          left: 0;
+          z-index: 1;
+          background-color: #01abab;
+          opacity: 0;
+          width: 100%;
+          padding: 30px;
+          transition: 0.3s linear;
+
+          &.slide-navbar {
+            top: 58px;
+            opacity: 1;
+          }
+
+          .btn-login {
+            margin-top: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
