@@ -1,11 +1,10 @@
-import propTypes from "prop-types";
+// import propTypes from "prop-types";
 import Slider from "react-animated-slider";
+
 import "react-animated-slider/build/horizontal.css";
 import "normalize.css/normalize.css";
 
 import Button from "../../atoms/Button";
-import TitleSection from "../../atoms/TitleSection";
-import Card from "../../atoms/Card";
 
 import Img1 from "../../../assests/img/image/1.jpg";
 import Img2 from "../../../assests/img/image/2.jpg";

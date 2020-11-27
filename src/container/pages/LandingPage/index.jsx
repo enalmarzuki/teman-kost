@@ -1,6 +1,10 @@
 import Header from "../../../components/molecules/Header";
 import Slider from "../../../components/molecules/Slider";
 import SlickCard from "../../../components/molecules/SlickCard";
+import Testimoni from "../../../components/atoms/Testimoni";
+import Footer from "../../../components/molecules/Footer";
+
+import Fade from "react-reveal/Fade";
 
 import Img3 from "../../../assests/img/image/3.jpg";
 
@@ -27,9 +31,34 @@ export default function index(props) {
   return (
     <div className="landing-page">
       <Header {...props} />
-      <Slider />
-      <SlickCard image={Img3} slideHire="rekomendasar" />
-      <SlickCard image={Img3} slideHire="kost-promo" />
+
+      <Fade delay={300}>
+        <Slider />
+      </Fade>
+
+      <Fade delay={300}>
+        <SlickCard
+          image={Img3}
+          slideHire="rekomendasar"
+          name="Rekomendasi Kost"
+          lokasi="Makassar"
+        />
+      </Fade>
+
+      <Fade delay={300}>
+        <SlickCard
+          image={Img3}
+          slideHire="kost-promo"
+          name="Kost Yang Lagi Promo"
+          lokasi="Makassar"
+        />
+      </Fade>
+
+      <Fade delay={300}>
+        <Testimoni />
+      </Fade>
+
+      <Footer />
     </div>
   );
 }

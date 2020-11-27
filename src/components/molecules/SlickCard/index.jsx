@@ -21,7 +21,7 @@ export default function index(props) {
     <div className="container container-slider-card">
       <div className="row">
         <div className="col">
-          <TitleSection name="Rekomendasi Kost" lokasi="Makassar" />
+          <TitleSection name={props.name} lokasi={props.lokasi} />
         </div>
       </div>
 

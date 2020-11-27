@@ -14,7 +14,7 @@ export default function Card(props) {
           <Button
             type="link"
             className="h5 card-title font-weight-bold mb-1 stretched-link d-block"
-            href={`detail-kost/${props._id}`}
+            href={`/detail-kost/${props._id}`}
           >
             {props.title}
           </Button>
