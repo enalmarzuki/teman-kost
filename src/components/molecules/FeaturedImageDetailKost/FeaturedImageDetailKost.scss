@@ -1,0 +1,25 @@
+.container-hero-detail-kost {
+  padding-top: 2.5em;
+  margin-bottom: 7em;
+
+  .img-detail-kost {
+    height: 100%;
+    img {
+      object-fit: cover;
+      border-radius: 30px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .detail-feature-image {
+    img {
+      width: 100%;
+      border-radius: 30px;
+
+      &:nth-child(1) {
+        margin-bottom: 2em;
+      }
+    }
+  }
+}
