@@ -1,0 +1,18 @@
+.stars {
+  position: relative;
+  min-width: 200px;
+  display: inline-flex;
+  .star {
+    position: absolute;
+    display: inline-flex;
+    mask: url(../../../assests/img/icon/star.svg) no-repeat center left;
+    &:not(.placeholder) {
+      z-index: 2;
+      background-color: #fff500;
+    }
+    &.placeholder {
+      z-index: 1;
+      background-color: #e9ecef;
+    }
+  }
+}

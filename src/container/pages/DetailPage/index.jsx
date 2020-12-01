@@ -6,8 +6,11 @@ import Description from "../../../components/molecules/DescriptionDetailKost";
 import Fasilitas from "../../../components/molecules/FasilitasKost";
 import ChooseRoom from "../../../components/molecules/ChooseRoom";
 import OwnerKost from "../../../components/molecules/OwnerKost";
+import ReviewKost from "../../../components/molecules/ReviewKost";
 import TitleSection from "../../../components/atoms/TitleSection";
+import TextArea from "../../../components/atoms/Form/TextArea";
 import Testimoni from "../../../components/atoms/Testimoni";
+import Footer from "../../../components/molecules/Footer";
 
 // import Img3 from "../../../assests/img/image/3.jpg";
 import wifi from "../../../assests/img/icon/wifi.png";
@@ -57,7 +60,14 @@ export default function index(props) {
       <Fasilitas images={sekitaranKost} />
       <OwnerKost data={ownerKost} />
 
+      <TitleSection name="Review Kost" />
+      <ReviewKost />
+
       <Testimoni />
+      <TitleSection name="Berikan Testimoni Anda" />
+      <TextArea />
+
+      <Footer />
     </div>
   );
 }
