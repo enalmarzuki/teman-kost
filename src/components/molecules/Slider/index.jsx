@@ -10,7 +10,7 @@ import Img1 from "../../../assests/img/image/1.jpg";
 import Img2 from "../../../assests/img/image/2.jpg";
 import Img3 from "../../../assests/img/image/3.jpg";
 
-import "./Slider.css";
+import "./Slider.scss";
 
 const content = [
   {

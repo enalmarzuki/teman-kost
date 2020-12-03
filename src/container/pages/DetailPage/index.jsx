@@ -12,7 +12,7 @@ import TextArea from "../../../components/atoms/Form/TextArea";
 import Testimoni from "../../../components/atoms/Testimoni";
 import Footer from "../../../components/molecules/Footer";
 
-// import Img3 from "../../../assests/img/image/3.jpg";
+import Img3 from "../../../assests/img/image/3.jpg";
 import wifi from "../../../assests/img/icon/wifi.png";
 import ruang_kerja from "../../../assests/img/icon/ruang_kerja.png";
 import ac from "../../../assests/img/icon/ac.png";
@@ -43,6 +43,12 @@ export default function index(props) {
     { name: "Pasar", image: pasar },
   ];
 
+  const kamarTersedia = [
+    { _id: "342zxc", tersedia: 4, image: Img3 },
+    { _id: "456zxv", tersedia: 2, image: Img3 },
+    { _id: "2352xcvxc", tersedia: 6, image: Img3 },
+  ];
+
   const ownerKost = ["Ibu Putri Nurcahya"];
 
   return (
@@ -51,13 +57,13 @@ export default function index(props) {
       <PageDetailTitle breadcrumb={breadcrumb} />
       <FeaturedImage />
       <TitleSection name="Pilihan Kamar" />
-      <ChooseRoom />
+      <ChooseRoom data={kamarTersedia} />
       <TitleSection name="Tentang Kost" />
       <Description />
       <TitleSection name="Fasilitas Kost" />
-      <Fasilitas images={fasilitasKost} />
+      <Fasilitas fasilitas={fasilitasKost} />
       <TitleSection name="Sekitaran Kost" />
-      <Fasilitas images={sekitaranKost} />
+      <Fasilitas fasilitas={sekitaranKost} />
       <OwnerKost data={ownerKost} />
 
       <TitleSection name="Review Kost" />

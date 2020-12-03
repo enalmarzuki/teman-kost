@@ -1,47 +1,38 @@
 import React from "react";
-import Img3 from "../../../assests/img/image/3.jpg";
+
+import Button from "../../atoms/Button";
 
 import "./ChooseRoom.scss";
 
 export default function index(props) {
+  const { data } = props;
   return (
     <div className="container container-pilihan-kamar">
       <div className="row mt-4">
-        <div className="col-md-4">
-          <div className="detail-kost-kamar">
-            <img src={Img3} alt="bgfjhfg" />
-            <div className="detail-kost-text-hover">
-              <h4 className="font-weight-bold mb-1 text-center text-white">
-                Tersedia 4 Kamar
-              </h4>
-              <h5 className="text-center text-white">Klik Untuk Detail</h5>
+        {data.map((kamarTersedia, index) => {
+          return (
+            <div className="col-md-4" key={index}>
+              <div className="detail-kost-kamar">
+                <img
+                  src={kamarTersedia.image}
+                  alt={`Kamar Tersedia ${index}`}
+                />
+                <div className="detail-kost-text-hover">
+                  <h4 className="font-weight-bold mb-1 text-center text-white">
+                    Tersedia {kamarTersedia.tersedia} Kamar
+                  </h4>
+                  <Button
+                    type="link"
+                    href={`/detail-kamar/${kamarTersedia._id}`}
+                    className="stretched-link text-center text-white h5"
+                  >
+                    Klik Untuk Detail
+                  </Button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="detail-kost-kamar">
-            <img src={Img3} alt="bgfjhfg" />
-            <div className="detail-kost-text-hover">
-              <h4 className="font-weight-bold mb-1 text-center text-white">
-                Tersedia 4 Kamar
-              </h4>
-              <h5 className="text-center text-white">Klik Untuk Detail</h5>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="detail-kost-kamar">
-            <img src={Img3} alt="bgfjhfg" />
-            <div className="detail-kost-text-hover">
-              <h4 className="font-weight-bold mb-1 text-center text-white">
-                Tersedia 4 Kamar
-              </h4>
-              <h5 className="text-center text-white">Klik Untuk Detail</h5>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );
