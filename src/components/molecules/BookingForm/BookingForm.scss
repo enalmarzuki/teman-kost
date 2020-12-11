@@ -1,0 +1,29 @@
+.container-kamar-fasiltas {
+  margin-bottom: 9.5em;
+  .fasilitas-kost-wrapper {
+    width: 50%;
+    display: inline-block;
+    margin-top: 2em;
+
+    img {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+
+  .booking-form {
+    .input-date {
+      height: 2.5em;
+      width: 80%;
+      text-transform: capitalize;
+      padding: 0 1em;
+    }
+
+    .error-helper {
+      background-color: red;
+      color: white;
+      padding: 0 2px;
+      font-size: 0.675rem;
+    }
+  }
+}
