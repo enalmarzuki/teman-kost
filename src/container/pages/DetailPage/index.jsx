@@ -8,7 +8,7 @@ import ChooseRoom from "../../../components/molecules/ChooseRoom";
 import OwnerKost from "../../../components/molecules/OwnerKost";
 import ReviewKost from "../../../components/molecules/ReviewKost";
 import TitleSection from "../../../components/atoms/TitleSection";
-import TextArea from "../../../components/atoms/Form/TextArea";
+import { TextArea } from "../../../components/atoms/Form";
 import Testimoni from "../../../components/atoms/Testimoni";
 import Footer from "../../../components/molecules/Footer";
 
@@ -30,41 +30,47 @@ export default function index(props) {
     { pageTitle: "Detail Kost", pageHref: "" },
   ];
 
-  const fasilitasKost = [
-    { name: "Wifi", image: wifi },
-    { name: "Ruang Kerja", image: ruang_kerja },
-    { name: "AC", image: ac },
-    { name: "Parkir", image: parkir },
-  ];
-  const sekitaranKost = [
-    { name: "Mall", image: mall },
-    { name: "Kampus", image: kampus },
-    { name: "ATM", image: atm },
-    { name: "Pasar", image: pasar },
-  ];
-
-  const kamarTersedia = [
-    { _id: "342zxc", tersedia: 4, image: Img3 },
-    { _id: "456zxv", tersedia: 2, image: Img3 },
-    { _id: "2352xcvxc", tersedia: 6, image: Img3 },
-  ];
-
-  const ownerKost = ["Ibu Putri Nurcahya"];
+  const data = {
+    namaKost: "Kost Putri Mustafa",
+    alamat: "Jl. Sultan Alauddin, Makassar",
+    owner: "Ibu Putri Nurcahya",
+    fasilitasKost: [
+      { name: "Wifi", image: wifi },
+      { name: "Ruang Kerja", image: ruang_kerja },
+      { name: "AC", image: ac },
+      { name: "Parkir", image: parkir },
+    ],
+    sekitaranKost: [
+      { name: "Mall", image: mall },
+      { name: "Kampus", image: kampus },
+      { name: "ATM", image: atm },
+      { name: "Pasar", image: pasar },
+    ],
+    kamarTersedia: [
+      { _id: "342zxc", tersedia: 4, image: Img3 },
+      { _id: "456zxv", tersedia: 2, image: Img3 },
+      { _id: "2352xcvxc", tersedia: 6, image: Img3 },
+    ],
+  };
 
   return (
     <div className="detail-page">
       <Header {...props} />
-      <PageDetailTitle breadcrumb={breadcrumb} />
+      <PageDetailTitle
+        breadcrumb={breadcrumb}
+        title={data.namaKost}
+        subTitle={data.alamat}
+      />
       <FeaturedImage />
       <TitleSection name="Pilihan Kamar" />
-      <ChooseRoom data={kamarTersedia} />
+      <ChooseRoom data={data.kamarTersedia} />
       <TitleSection name="Tentang Kost" />
       <Description />
       <TitleSection name="Fasilitas Kost" />
-      <Fasilitas fasilitas={fasilitasKost} />
+      <Fasilitas fasilitas={data.fasilitasKost} />
       <TitleSection name="Sekitaran Kost" />
-      <Fasilitas fasilitas={sekitaranKost} />
-      <OwnerKost data={ownerKost} />
+      <Fasilitas fasilitas={data.sekitaranKost} />
+      <OwnerKost data={data.owner} />
 
       <TitleSection name="Review Kost" />
       <ReviewKost />

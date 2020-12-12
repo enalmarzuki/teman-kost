@@ -1,0 +1,78 @@
+h3.title-section {
+  margin-top: 2em;
+
+  @media screen and (max-width: 425px) {
+    font-size: 1.5rem;
+  }
+}
+
+.container-checkout-page {
+  min-height: 100vh;
+
+  .col-checkout-information {
+    @media screen and (max-width: 425px) {
+      padding-right: 15px !important;
+    }
+    .table {
+      margin-top: 2em;
+      margin-bottom: 4em;
+      tr {
+        td {
+          text-align: right;
+          border-top: none;
+        }
+      }
+    }
+
+    .opsi-transfer {
+      display: flex;
+      justify-content: space-between;
+
+      @media screen and (max-width: 425px) {
+        display: inline;
+      }
+
+      &-wrapper {
+        display: flex;
+
+        @media screen and (max-width: 425px) {
+          margin-bottom: 2em;
+          justify-content: center;
+        }
+        .desc-bank {
+          h5 {
+            margin-bottom: 0.5em;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .col-checkout-form {
+    margin-top: 4em;
+
+    @media screen and (max-width: 425px) {
+      padding-left: 15px !important;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      background-color: #f5f6f8;
+      border: none;
+      overflow: hidden;
+    }
+
+    p.error {
+      font-weight: bold;
+      color: red;
+    }
+  }
+
+  .row-button-checkout-page {
+    margin-top: 5em;
+  }
+}

@@ -5,7 +5,6 @@ import "./FasilitasKost.scss";
 
 export default function Fasilitas(props) {
   const { fasilitas, isDetailKamar } = props;
-  console.log(props);
 
   return (
     <div className="container container-fasilitas-kost mt-4">

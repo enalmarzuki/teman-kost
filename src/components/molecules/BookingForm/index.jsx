@@ -11,6 +11,7 @@ export default function BookingForm(props) {
   const [hargaSewa, setHargaSewa] = useState("");
   const [tglMasuk, setTglMasuk] = useState("");
   const [tglKeluar, setTglKeluar] = useState("");
+  const [biayaAdmin, setBiayaAdmin] = useState(0);
   const [total, setTotal] = useState(0);
 
   const [sewaError, setSewaError] = useState(false);
@@ -46,6 +47,7 @@ export default function BookingForm(props) {
 
     // Biaya admin di Ubah Ke Rupiah
     let admin = 10000;
+    setBiayaAdmin(admin);
     const biayaAdmin = document.querySelector(".biaya-admin-text");
     biayaAdmin.innerHTML = `Rp. ${formatNumber(admin)}`;
 
@@ -81,7 +83,13 @@ export default function BookingForm(props) {
     if (hargaSewa === "") return setSewaError(true);
     if (tglMasuk === "") return setTglMasukError(true);
 
-    const data = { tglMasuk: tglMasuk, tglKeluar: tglKeluar, total: total };
+    const data = {
+      tglMasuk,
+      tglKeluar,
+      hargaSewa,
+      biayaAdmin,
+      total,
+    };
     props.history.push({
       pathname: "/checkout",
       state: { data },
