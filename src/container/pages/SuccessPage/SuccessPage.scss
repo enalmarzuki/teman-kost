@@ -1,0 +1,12 @@
+.success-page {
+  .container-success-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+
+    .icon-success {
+      margin-top: 3em;
+    }
+  }
+}

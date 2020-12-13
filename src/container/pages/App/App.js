@@ -6,6 +6,7 @@ import LandingPage from "../LandingPage";
 import DetailPage from "../DetailPage";
 import DetailKamar from "../DetailKamar";
 import CheckoutPage from "../CheckoutPage";
+import SuccessPage from "../SuccessPage";
 
 // Style
 import "../../../assests/scss/style.scss";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/detail-kost/:id" component={DetailPage} />
           <Route path="/detail-kamar/:id" component={DetailKamar} />
           <Route path="/checkout" component={CheckoutPage} />
+          <Route path="/success" component={SuccessPage} />
         </Router>
       </div>
     </Provider>

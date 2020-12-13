@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import formatNumber from "../../../utils/formatNumber";
 import Button from "../../../components/atoms/Button";
 
 import LogoBca from "../../../assests/img/image/logo-bca.jpg";
@@ -11,12 +12,33 @@ export default function BookingInformation(props) {
   const { location } = props;
   const { register, handleSubmit, errors } = useForm();
 
-  const onsubmit = (data) => {
-    console.log(data);
+  const [isLoading, setisLoading] = useState(false);
+
+  const loading = async () => {
+    await new Promise((resolve, reject) => {
+      setisLoading(true);
+      setTimeout(() => {
+        setisLoading(false);
+        resolve();
+      }, 3000);
+    });
+  };
+
+  const onsubmit = async (data) => {
+    await loading();
+    props.history.push({
+      pathname: "/success",
+      state: { data },
+    });
   };
 
   return (
     <div className="container container-checkout-page">
+      {isLoading && (
+        <div className="loading-submit">
+          <h4 className="font-weight-bold">Loading...</h4>
+        </div>
+      )}
       <div className="row mb-5">
         <div
           className="col-md-7 border-right col-checkout-information"
@@ -30,7 +52,7 @@ export default function BookingInformation(props) {
                 </td>
                 <td>
                   <h5 className="font-weight-bold">
-                    {location.state.data.hargaSewa}
+                    Rp. {formatNumber(location.state.data.hargaSewa)}
                   </h5>
                 </td>
               </tr>
@@ -41,7 +63,7 @@ export default function BookingInformation(props) {
                 </td>
                 <td>
                   <h5 className="font-weight-bold">
-                    {location.state.data.biayaAdmin}
+                    Rp. {formatNumber(location.state.data.biayaAdmin)}
                   </h5>
                 </td>
               </tr>
@@ -52,7 +74,7 @@ export default function BookingInformation(props) {
                 </td>
                 <td>
                   <h2 className="font-weight-bold">
-                    {location.state.data.total}
+                    Rp. {formatNumber(location.state.data.total)}
                   </h2>
                 </td>
               </tr>
@@ -87,19 +109,20 @@ export default function BookingInformation(props) {
         <div className="col-md-5 col-checkout-form" style={{ paddingLeft: 80 }}>
           <form>
             <label htmlFor="namaLengkap">Nama Lengkap *</label>
+            {errors.namaLengkap && (
+              <p className="error">{errors.namaLengkap.message}</p>
+            )}
             <input
               className="form-control form-control-lg mb-4"
               type="text"
               id="namaLengkap"
               name="namaLengkap"
               placeholder="Ketik Nama Lengkap"
-              ref={register({ required: "Nama Lengkap Harus Di Isi" })}
+              ref={register({ required: "Harus Di Isi" })}
             />
-            {errors.namaLengkap && (
-              <p className="error">{errors.namaLengkap.message}</p>
-            )}
 
             <label htmlFor="nomorTelpon">Nomor Telpon *</label>
+            {errors.nomorTelpon && <p className="error">Harus Di Isi</p>}
             <input
               className="form-control form-control-lg mb-4"
               type="text"
@@ -108,11 +131,9 @@ export default function BookingInformation(props) {
               placeholder="Ketik Nomor Telpon"
               ref={register({ required: true })}
             />
-            {errors.nomorTelpon && (
-              <p className="error">Nomor Telpon Harus Di Isi</p>
-            )}
 
             <label htmlFor="fotoKtp">Upload Foto KTP *</label>
+            {errors.fotoKtp && <p className="error">Tidak Boleh Kosong</p>}
             <input
               className="form-control form-control-lg mb-4"
               type="file"
@@ -120,11 +141,13 @@ export default function BookingInformation(props) {
               name="fotoKtp"
               ref={register({ required: true })}
             />
-            {errors.fotoKtp && <p className="error">Tidak Boleh Kosong</p>}
 
             <label htmlFor="fotoBuktiPembayaran">
               Upload Bukti Pembayaran *
             </label>
+            {errors.fotoBuktiPembayaran && (
+              <p className="error">Tidak Boleh Kosong</p>
+            )}
             <input
               className="form-control form-control-lg"
               type="file"
@@ -132,9 +155,6 @@ export default function BookingInformation(props) {
               name="fotoBuktiPembayaran"
               ref={register({ required: true })}
             />
-            {errors.fotoBuktiPembayaran && (
-              <p className="error">Tidak Boleh Kosong</p>
-            )}
           </form>
         </div>
       </div>
