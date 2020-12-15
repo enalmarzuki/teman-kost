@@ -7,6 +7,8 @@ import DetailPage from "../DetailPage";
 import DetailKamar from "../DetailKamar";
 import CheckoutPage from "../CheckoutPage";
 import SuccessPage from "../SuccessPage";
+import Login from "../LoginPage";
+import Register from "../RegisterPage";
 
 // Style
 import "../../../assests/scss/style.scss";
@@ -21,6 +23,8 @@ function App() {
           <Route path="/detail-kamar/:id" component={DetailKamar} />
           <Route path="/checkout" component={CheckoutPage} />
           <Route path="/success" component={SuccessPage} />
+          <Route path="/login" component={Login} />
+          <Route path="/Register" component={Register} />
         </Router>
       </div>
     </Provider>

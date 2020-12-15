@@ -16,6 +16,13 @@
     }
   }
 
+  .card-see-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
   &-body {
     .card-title {
       text-decoration: none;

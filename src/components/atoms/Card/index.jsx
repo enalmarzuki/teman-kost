@@ -4,9 +4,27 @@ import Button from "../Button";
 import "./Card.scss";
 
 export default function Card(props) {
+  if (props.isSeeAll) {
+    return (
+      <div className="col-md-4 col-lg-3 px-2">
+        <div className="card h-100">
+          <div className="card-see-all">
+            <Button
+              type="link"
+              className="h5 card-title font-weight-bold mb-1 stretched-link d-block"
+              href={`/see-all/${props.seeAllKost}`}
+            >
+              Lihat Semua
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="col-md-4 col-lg-3 px-2">
-      <div className="card mt-3 ">
+      <div className="card  h-100">
         <div className="card-image">
           <img className="card-img-top" src={props.image} alt="Kost" />
         </div>
