@@ -1,0 +1,32 @@
+{
+  "_id": "asdazxas12213",
+  "namaKost": "Kost Putri Mustafa",
+  "alamat": "Jl. Sultan Alauddin, Makassar",
+  "imgUrl": "/images/img-featured-1.jpg",
+  "fasilitasKost": {
+    "_id": "asdazxas12213",
+    "title": "Fasilitas Kost",
+    "fasilitas": [
+      {
+        "_id": "asdazxas12213",
+        "name": "Wifi",
+        "image": "/images/wifi.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Ruang Kerja",
+        "image": "/images/ruang-kerja.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "AC",
+        "image": "/images/ac.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Parkir",
+        "image": "/images/parkir.jpg"
+      }
+    ]
+  }
+}

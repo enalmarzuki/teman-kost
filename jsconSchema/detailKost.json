@@ -1,0 +1,141 @@
+{
+  "_id": "asdazxas12213",
+  "namaKost": "Kost Putri Mustafa",
+  "alamat": "Jl. Sultan Alauddin, Makassar",
+  "pemilikKost": "Ibu Putri Nurcahya",
+  "imgKost": [
+    {
+      "_id": "asdazxas12213",
+      "url": "/images/img-featured-1.jpg"
+    },
+    {
+      "_id": "asdazxas12213",
+      "url": "/images/img-featured-2.jpg"
+    },
+    {
+      "_id": "asdazxas12213",
+      "url": "/images/img-featured-3.jpg"
+    }
+  ],
+  "kamarTersedia": {
+    "_id": "asdazxas12213",
+    "title": "Pilihan Kamar",
+    "tersedia": [
+      {
+        "_id": "342zxc",
+        "tersedia": 4,
+        "image": "/images/kamarTersedia1.jpg"
+      },
+      {
+        "_id": "456zxv",
+        "tersedia": 2,
+        "image": "/images/kamarTersedia2.jpg"
+      },
+      {
+        "_id": "2352xcvxc",
+        "tersedia": 6,
+        "image": "/images/kamarTersedia3.jpg"
+      }
+    ]
+  },
+  "tentangKost": {
+    "_id": "asdazxas12213",
+    "title": "Tentang Kost",
+    "description": "Kost Putri Mustafa adalah kost yang bersih, letak strategis, akses menuju jalan raya bagus. di kost kami menerima laki - laki dan perempuan. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "fasilitasKost": {
+    "_id": "asdazxas12213",
+    "title": "Fasilitas Kost",
+    "fasilitas": [
+      {
+        "_id": "asdazxas12213",
+        "name": "Wifi",
+        "image": "/images/wifi.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Ruang Kerja",
+        "image": "/images/ruang-kerja.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "AC",
+        "image": "/images/ac.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Parkir",
+        "image": "/images/parkir.jpg"
+      }
+    ]
+  },
+  "sekitaranKost": {
+    "_id": "asdazxas12213",
+    "title": "Sekitaran Kost",
+    "fasilitasPublik": [
+      {
+        "_id": "asdazxas12213",
+        "name": "Mall",
+        "image": "/images/mall.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Kampus",
+        "image": "/images/kampus.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "ATM",
+        "image": "/images/atm.jpg"
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Pasar",
+        "image": "/images/pasar.jpg"
+      }
+    ]
+  },
+  "reviewKost": {
+    "_id": "asdazxas12213",
+    "title": "Review Kost",
+    "rating": [
+      {
+        "_id": "asdazxas12213",
+        "name": "Kebersihan",
+        "rate": 4.25
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Keamanan",
+        "rate": 5
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Kenyamanan",
+        "rate": 4.5
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Fasilitas Kamar",
+        "rate": 4.5
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Fasilitas Bersama",
+        "rate": 4
+      },
+      {
+        "_id": "asdazxas12213",
+        "name": "Harga",
+        "rate": 4
+      }
+    ]
+  },
+  "testimonial": {
+    "_id": "asdazxas12213",
+    "imageUrl": "/images/testimonial-detailKost.jpg",
+    "name": "Joanna Alexander",
+    "testimoni": "Website ini sangat memudahkan saya sebagai mahasiswa baru untuk mencari kost yang ada di makassar, dan pilihan kost-nya juga sangat lengkap.",
+    "pekerjaan": "Mahasiswa"
+  }
+}

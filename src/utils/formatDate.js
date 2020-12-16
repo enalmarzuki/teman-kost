@@ -1,12 +1,14 @@
 export default (date) => {
   const d = new Date(date);
-  const dtf = new Intl.DateTimeFormat("en", {
+  const dtf = new Intl.DateTimeFormat("id", {
     year: "numeric",
-    month: "short",
+    month: "long",
     day: "2-digit",
   });
 
-  const [{ value: mo }, , { value: da }] = dtf.formatToParts(d);
+  const [{ value: mo }, , { value: da }, , { value: year }] = dtf.formatToParts(
+    d
+  );
 
-  return `${da} ${mo}`;
+  return `${mo} ${da} ${year}`;
 };

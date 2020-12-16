@@ -11,7 +11,7 @@ import "./CheckoutPage.scss";
 
 export default function index(props) {
   // console.log(props.history);
-  // console.log(props.location.state.data);
+  console.log(props.location.state.data);
 
   return (
     <div className="checkout-page">

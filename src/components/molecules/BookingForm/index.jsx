@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import formatNumber from "../../../utils/formatNumber";
+import formatDate from "../../../utils/formatDate";
 
 import Button from "../../../components/atoms/Button";
 
 import "./BookingForm.scss";
 
 export default function BookingForm(props) {
-  let durasi = 0;
+  // let durasi = 0;
+  const [durasi, setDurasi] = useState(0);
 
   const [hargaSewa, setHargaSewa] = useState("");
   const [tglMasuk, setTglMasuk] = useState("");
@@ -26,15 +28,15 @@ export default function BookingForm(props) {
       if (waktuSewa[i].checked) {
         if (i === 0) {
           harga = 700000;
-          durasi = 2628000000;
+          setDurasi(2628000000);
           setHargaSewa(harga);
         } else if (i === 1) {
           harga = 3500000;
-          durasi = 15768000000;
+          setDurasi(15768000000);
           setHargaSewa(harga);
         } else {
           harga = 7000000;
-          durasi = 31536000000;
+          setDurasi(31536000000);
           setHargaSewa(harga);
         }
         setSewaError(false);
@@ -44,6 +46,10 @@ export default function BookingForm(props) {
       const biayaSewa = document.querySelector(".biaya-sewa-text");
       biayaSewa.innerHTML = `Rp. ${formatNumber(harga)}`;
     }
+
+    const inputDate = (document.querySelector("#tanggalMasuk").value = "");
+    setTglMasuk(inputDate);
+    setTglKeluar("");
 
     // Biaya admin di Ubah Ke Rupiah
     let admin = 10000;
@@ -60,9 +66,9 @@ export default function BookingForm(props) {
 
   const handleClick = (e) => {
     const tglMasuk = e.target.value;
-    setTglMasuk(tglMasuk);
-    const tglMasuk2 = tglMasuk.split("-");
+    setTglMasuk(formatDate(tglMasuk));
 
+    const tglMasuk2 = tglMasuk.split("-");
     const newDate = new Date(
       tglMasuk2[0],
       tglMasuk2[1] - 1,
@@ -70,11 +76,11 @@ export default function BookingForm(props) {
     ).getTime();
 
     const timeKeluar = newDate + durasi;
-    const tglKeluar = new Date(timeKeluar);
-    const fixKeluar = new Intl.DateTimeFormat("en-US").format(tglKeluar);
-    setTglKeluar(fixKeluar);
+    const tglKeluar = formatDate(timeKeluar);
+    setTglKeluar(formatDate(timeKeluar));
+
     const outKost = document.querySelector(".tgl-keluar-text");
-    outKost.innerHTML = fixKeluar;
+    outKost.innerHTML = tglKeluar;
 
     setTglMasukError(false);
   };
@@ -82,6 +88,9 @@ export default function BookingForm(props) {
   const startBooking = (e) => {
     if (hargaSewa === "") return setSewaError(true);
     if (tglMasuk === "") return setTglMasukError(true);
+
+    // if (sewaError) return setSewaError(true);
+    // if (tglMasukError) return setTglMasukError(true);
 
     const data = {
       tglMasuk,

@@ -26,6 +26,13 @@ export default function BookingInformation(props) {
 
   const onsubmit = async (data) => {
     await loading();
+
+    // const payload = new FormData();
+
+    data.tglMasuk = location.state.data.tglMasuk;
+    data.tglKeluar = location.state.data.tglKeluar;
+    data.total = location.state.data.total;
+
     props.history.push({
       pathname: "/success",
       state: { data },

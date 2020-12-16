@@ -1,0 +1,124 @@
+{
+  "_id": "asdazxas12213",
+  "hero": [
+    {
+      "_id": "asdazxas12213",
+      "title": "Lagi Mencari Kost ?",
+      "description": "Bergabung bersama kami dan dapatkan info-nya dan langsung sewa di TemanKost.",
+      "image": "/images/mencariKost.jpg"
+    },
+    {
+      "_id": "asdazxas12213",
+      "title": "Lagi Ada Promo Buat Kamu",
+      "description": "Bergabung bersama kami dan dapatkan info-nya dan langsung sewa di TemanKost.",
+      "image": "/images/promoKost.jpg"
+    },
+    {
+      "_id": "asdazxas12213",
+      "title": "Kost Paling Laris",
+      "description": "Bergabung bersama kami dan dapatkan info-nya dan langsung sewa di TemanKost.",
+      "image": "/images/kostLaris.jpg"
+    }
+  ],
+  "category": {
+    "rekomendasi": {
+      "_id": "asdazxas12213",
+      "title": "Rekomendasi Kost",
+      "lokasi": "Makassar",
+      "kost": [
+        {
+          "_id": "123asd",
+          "imageUrl": "/images/rekomendasi1.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "zxczxc",
+          "imageUrl": "/images/rekomendasi2.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "dazxcv",
+          "imageUrl": "/images/rekomendasi3.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "xccsdf",
+          "imageUrl": "/images/rekomendasi4.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "qrhdf",
+          "imageUrl": "/images/rekomendasi5.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "hjkcbcb",
+          "imageUrl": "/images/rekomendasi6.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        }
+      ]
+    },
+
+    "kostPromo": {
+      "_id": "asdazxas12213",
+      "title": "Kost Yang Lagi Promo",
+      "lokasi": "Makassar",
+      "kost": [
+        {
+          "_id": "123asd",
+          "imageUrl": "/images/promo1.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "zxczxc",
+          "imageUrl": "/images/promo2.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "dazxcv",
+          "imageUrl": "/images/promo3.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "xccsdf",
+          "imageUrl": "/images/promo4.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "qrhdf",
+          "imageUrl": "/images/promo5.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        },
+        {
+          "_id": "hjkcbcb",
+          "imageUrl": "/images/promo6.jpg",
+          "title": "Kost Putri Mustafa",
+          "lokasi": "Makassar",
+          "harga": "700.000"
+        }
+      ]
+    }
+  }
+}

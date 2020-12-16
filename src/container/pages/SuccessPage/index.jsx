@@ -6,7 +6,8 @@ import Success from "../../../assests/img/icon/success.png";
 import "./SuccessPage.scss";
 
 export default function index(props) {
-  console.log(props);
+  console.log(props.location.state.data);
+
   return (
     <div className="success-page">
       <div className="container container-success-page">
